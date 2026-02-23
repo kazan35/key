@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .label {
+    @apply text-xs text-zinc-400 uppercase tracking-widest mb-1.5 block;
+  }
+  .input {
+    @apply bg-zinc-900 border border-zinc-700 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 
+           focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/50 transition;
+  }
+}
+
+@layer base {
+  :root {
+    --accent: 139 92 246;
+    --accent-glow: 0 0 30px rgba(139, 92, 246, 0.35);
+  }
+}
+
+@layer utilities {
+  .glow {
+    box-shadow: var(--accent-glow);
+  }
+  .font-mono {
+    font-family: var(--font-mono), monospace;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #484f58; }
